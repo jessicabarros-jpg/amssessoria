@@ -19,8 +19,8 @@ import { type FormEvent, useEffect } from "react";
 import heroImage from "@/assets/am-mining-hero.jpg";
 import officialLogo from "@/assets/am-logo-oficial.png.asset.json";
 import bioeticaLogo from "@/assets/clients/72-bioetica-ambiental.png.asset.json";
-import csServicosLogo from "@/assets/clients/70-cvt-construtora.png.asset.json";
-import cvtConstrutoraLogo from "@/assets/clients/69-cs-servicos-manutencao.png.asset.json";
+import csServicosLogo from "@/assets/clients/69-cs-servicos-manutencao.png.asset.json";
+import cvtConstrutoraLogo from "@/assets/clients/70-cvt-construtora.png.asset.json";
 import esLogo from "@/assets/clients/68-e-s.png.asset.json";
 import farMotoresLogo from "@/assets/clients/66-far-motores.png.asset.json";
 import identificLogo from "@/assets/clients/64-identific.png.asset.json";
@@ -33,6 +33,8 @@ import sergioPhoto from "@/assets/sergio-terra.jpeg.asset.json";
 import { Button } from "@/components/ui/button";
 
 const WHATSAPP_URL = "https://wa.me/553499169043";
+const SITE_URL = "https://amssma.com.br";
+const SHARE_IMAGE = `${SITE_URL}${heroImage}`;
 
 const CLIENT_LOGOS = [
   { name: "E/S", src: esLogo.url },
@@ -62,8 +64,15 @@ export const Route = createFileRoute("/")({
         content: "Parecer técnico e jurídico para decisões ambientais seguras, com sigilo e experiência em mineração.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:site_name", content: "AM Assessoria e Consultoria" },
+      { property: "og:image", content: SHARE_IMAGE },
+      { property: "og:image:alt", content: "Operação de mineração integrada a áreas verdes preservadas" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: SHARE_IMAGE },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
   }),
   component: Index,
 });
