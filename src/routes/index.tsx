@@ -17,19 +17,19 @@ import {
 import { type FormEvent, useEffect } from "react";
 
 import heroImage from "@/assets/am-mining-hero.jpg";
-import officialLogo from "@/assets/am-logo-oficial.png.asset.json";
-import bioeticaLogo from "@/assets/clients/72-bioetica-ambiental.png.asset.json";
-import csServicosLogo from "@/assets/clients/69-cs-servicos-manutencao.png.asset.json";
-import cvtConstrutoraLogo from "@/assets/clients/70-cvt-construtora.png.asset.json";
-import esLogo from "@/assets/clients/68-e-s.png.asset.json";
-import farMotoresLogo from "@/assets/clients/66-far-motores.png.asset.json";
-import identificLogo from "@/assets/clients/64-identific.png.asset.json";
-import instaleLogo from "@/assets/clients/67-instale-tecnologia.png.asset.json";
-import letsLogo from "@/assets/clients/58-lets.png.asset.json";
-import linktapLogo from "@/assets/clients/65-linktap.png.asset.json";
-import trimolLogo from "@/assets/clients/57-trimol.png.asset.json";
-import marciaPhoto from "@/assets/marcia-abdanur.jpeg.asset.json";
-import sergioPhoto from "@/assets/sergio-terra.jpeg.asset.json";
+import officialLogo from "@/assets/am-logo-oficial.png";
+import bioeticaLogo from "@/assets/clients/72-bioetica-ambiental.png";
+import csServicosLogo from "@/assets/clients/69-cs-servicos-manutencao.png";
+import cvtConstrutoraLogo from "@/assets/clients/70-cvt-construtora.png";
+import esLogo from "@/assets/clients/68-e-s.png";
+import farMotoresLogo from "@/assets/clients/66-far-motores.png";
+import identificLogo from "@/assets/clients/64-identific.png";
+import instaleLogo from "@/assets/clients/67-instale-tecnologia.png";
+import letsLogo from "@/assets/clients/58-lets.png";
+import linktapLogo from "@/assets/clients/65-linktap.png";
+import trimolLogo from "@/assets/clients/57-trimol.webp";
+import marciaPhoto from "@/assets/marcia-abdanur.jpeg";
+import sergioPhoto from "@/assets/sergio-terra.jpeg";
 import { Button } from "@/components/ui/button";
 
 const WHATSAPP_URL = "https://wa.me/553499169043";
@@ -37,16 +37,16 @@ const SITE_URL = "https://amssma.com.br";
 const SHARE_IMAGE = `${SITE_URL}${heroImage}`;
 
 const CLIENT_LOGOS = [
-  { name: "E/S", src: esLogo.url },
-  { name: "Identific", src: identificLogo.url },
-  { name: "Linktap", src: linktapLogo.url },
-  { name: "FAR Motores", src: farMotoresLogo.url },
-  { name: "Instale Tecnologia", src: instaleLogo.url },
-  { name: "Bioética Ambiental", src: bioeticaLogo.url },
-  { name: "CVT Construtora", src: cvtConstrutoraLogo.url },
-  { name: "CS Serviços e Manutenção", src: csServicosLogo.url },
-  { name: "Trimol", src: trimolLogo.url },
-  { name: "Let's", src: letsLogo.url },
+  { name: "E/S", src: esLogo },
+  { name: "Identific", src: identificLogo },
+  { name: "Linktap", src: linktapLogo },
+  { name: "FAR Motores", src: farMotoresLogo },
+  { name: "Instale Tecnologia", src: instaleLogo },
+  { name: "Bioética Ambiental", src: bioeticaLogo },
+  { name: "CVT Construtora", src: cvtConstrutoraLogo },
+  { name: "CS Serviços e Manutenção", src: csServicosLogo },
+  { name: "Trimol", src: trimolLogo },
+  { name: "Let's", src: letsLogo },
 ];
 
 export const Route = createFileRoute("/")({
@@ -80,7 +80,7 @@ export const Route = createFileRoute("/")({
 function BrandMark() {
   return (
     <a href="#inicio" className="brand" aria-label="AM Assessoria e Consultoria — início">
-      <img className="brand-logo" src={officialLogo.url} alt="AM Assessoria e Consultoria" />
+      <img className="brand-logo" src={officialLogo} alt="AM Assessoria e Consultoria" />
     </a>
   );
 }
@@ -217,7 +217,7 @@ function Index() {
           </div>
           <div className="people">
             <article className="person reveal">
-              <div className="person-photo person-photo-sergio"><img src={sergioPhoto.url} alt="Sérgio A. Bittes Terra" /></div>
+              <div className="person-photo person-photo-sergio"><img src={sergioPhoto} alt="Sérgio A. Bittes Terra" /></div>
               <div className="person-content">
                 <span>Sócio · Direito (Uniaraxá)</span>
                 <h3>Sérgio A. Bittes Terra</h3>
@@ -226,7 +226,7 @@ function Index() {
               </div>
             </article>
             <article className="person reveal">
-              <div className="person-photo"><img src={marciaPhoto.url} alt="Márcia Ap. Silva Abdanur" /></div>
+              <div className="person-photo"><img src={marciaPhoto} alt="Márcia Ap. Silva Abdanur" /></div>
               <div className="person-content">
                 <span>Consultora Sênior de SSMA/EHS · OAB/MG 92.937</span>
                 <h3>Márcia Ap. Silva Abdanur</h3>
