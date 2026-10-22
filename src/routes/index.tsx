@@ -327,7 +327,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="location section-pad">
+      <section className="location section-pad" id="localizacao">
         <div className="shell location-grid">
           <div className="location-copy reveal">
             <span className="eyebrow">Araxá, Minas Gerais</span>
